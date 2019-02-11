@@ -1,0 +1,44 @@
+#########################开发环境配置#########################
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "shutdown"
+  endpoint:
+    shutdown:
+      enabled: true
+#单数据源配置 start#
+spring:
+  datasource:
+      driver-class-name:  com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://119.29.67.61:3306/logistic_dev?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+      username: root
+      password: 1234
+#单数据源配置 end#
+---
+#网关配置
+#spring:
+#  cloud:
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#网关配置END
+---
+# redis配置
+spring:
+  redis:
+    host: 127.0.0.1
+    password:
+    port: 6379
+    pool:
+      max-idle: 100
+      min-idle: 1
+      max-total: 1000
+      max-wait: -1
+#
+mybatis:
+   mapperLocations: classpath:/mapper/*.xml
+
+
+

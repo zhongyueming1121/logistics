@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "spring.datasource.connectionProperties",
+      "type": "java.lang.String",
+      "description": "Description for spring.datasource.connectionProperties."
+    },
+    {
+      "name": "spring.redis.pool.max-total",
+      "type": "java.lang.String",
+      "description": "Description for spring.redis.pool.max-total."
+    },
+    {
+      "name": "management.endpoint.shutdown.enabled",
+      "type": "java.lang.String",
+      "description": "Description for management.endpoint.shutdown.enabled."
+    }
+  ] }

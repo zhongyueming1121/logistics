@@ -1,0 +1,7 @@
+server:
+  port: 8803
+
+lgts:
+  security:
+    jwt:
+      secret: otherpeopledontknowit
