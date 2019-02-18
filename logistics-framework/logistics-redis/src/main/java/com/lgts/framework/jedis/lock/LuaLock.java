@@ -1,7 +1,6 @@
 package com.lgts.framework.jedis.lock;
 
 import com.lgts.framework.jedis.service.ILock;
-import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.util.Assert;
 import redis.clients.jedis.Jedis;
 
@@ -26,14 +25,6 @@ public class LuaLock implements ILock {
 	 * 单位s，一个线程持有锁的最大时间
 	 */
 	private static int lockMaxExistTime;
-	/**
-	 * 锁脚本
-	 */
-	private static DefaultRedisScript<Long> lockScript;
-	/**
-	 * 解锁脚本
-	 */
-	private static DefaultRedisScript<Long> unlockScript;
 
 	private static final String LOCK_SCRIPT =
 					"local key     = KEYS[1];\n" +
@@ -65,7 +56,7 @@ public class LuaLock implements ILock {
 	 */
 	private static ThreadLocal<String> threadKeyId = ThreadLocal.withInitial(()->UUID.randomUUID().toString());
 
-	public LuaLock(Jedis jedis, String lockPrex, int lockMaxExistTime){
+	LuaLock(Jedis jedis, String lockPrex, int lockMaxExistTime){
 		this.jedis = jedis;
 		LuaLock.lockPrex = lockPrex;
 		LuaLock.lockMaxExistTime = lockMaxExistTime;

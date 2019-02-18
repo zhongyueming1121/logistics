@@ -70,9 +70,9 @@
     <logger name="java.sql.PreparedStatement" level="DEBUG"/>
 
     <!--myibatis plus log configure-->
-    <logger name="com.baomidou.mybatisplus" level="INFO"/>
-    <logger name="com.diyou.entity.mapper" level="INFO"/>
-    <logger name="java.sql.Connection" level="INFO"/>
+    <logger name="com.baomidou.mybatisplus" level="DEBUG"/>
+    <logger name="com.diyou.entity.mapper" level="DEBUG"/>
+    <logger name="java.sql.Connection" level="DEBUG"/>
 
     <!-- 日志输出级别 -->
     <root level="INFO">

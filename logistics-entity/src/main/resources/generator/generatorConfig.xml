@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <!--引入配置文件-->
+    <properties resource="generator/mybatis_generator.properties"/>
+
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin"/>
+        <plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+            <property name="searchString" value="Example"/>
+            <property name="replaceString" value="Condition"/>
+        </plugin>
+        <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"/>
+        <plugin type="com.light.framework.plugin.mybatis.adapter.PlusMapperPlugin">
+            <property name="mappers" value="com.baomidou.mybatisplus.mapper.BaseMapper"/>
+            <property name="forceAnnotation" value="true"/>
+        </plugin>
+        <plugin type="com.light.framework.plugin.mybatis.adapter.PlusMapperPlugin"/>
+        <plugin type="com.light.framework.plugin.mybatis.adapter.CreateVoPlugin"/>
+        <!-- 取消注释 -->
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <jdbcConnection driverClass="${druid.driver-class}"
+                        connectionURL="${druid.url}"
+                        userId="${druid.username}"
+                        password="${druid.password}">
+        </jdbcConnection>
+        <javaModelGenerator targetPackage="${model.target.package}" targetProject="${mybatis.model.path}">
+            <property name="rootClass" value="com.light.framework.starter.base.sql.BaseEntity"/>
+        </javaModelGenerator>
+        <sqlMapGenerator targetPackage="${map.target.package}" targetProject="${mybatis.mapper.xml.path}"/>
+        <javaClientGenerator targetPackage="${map.target.package}" targetProject="${mybatis.mapper.interface.path}" type="XMLMAPPER"/>
+
+        <table tableName="sys_user" domainObjectName="SysUserEntity" mapperName="SysUserMapper">
+            <!--如果需要生成 vo 则定义此属性-->
+            <property name="voObjectName" value="SysUserVo"/>
+        </table>
+    </context>
+</generatorConfiguration>

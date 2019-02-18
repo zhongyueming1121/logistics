@@ -3,6 +3,7 @@ package com.lgts.framework.jedis.lock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
 
 /**
  * lua脚本实现的可重入的分布式Redis锁
@@ -18,7 +19,7 @@ public class RedisLock {
     private static final int DEFAULT_LOCK_MAX_EXIST_TIME = 15;
 
     @Autowired
-    Jedis jedis;
+    private JedisPool jedisPool;
 
     /**
      * 创建一个锁对象
@@ -28,7 +29,7 @@ public class RedisLock {
      * @return
      */
     public LuaLock newLock(String lockPre, int lockMaxExistTime) {
-        return new LuaLock(jedis, lockPre, lockMaxExistTime);
+        return new LuaLock(jedisPool.getResource(), lockPre, lockMaxExistTime);
     }
 
     /**
@@ -39,7 +40,7 @@ public class RedisLock {
      * @return
      */
     public LuaLock newDefaultLock() {
-        return new LuaLock(jedis, "LUA_DEFAULT_LOCK_", DEFAULT_LOCK_MAX_EXIST_TIME);
+        return new LuaLock(jedisPool.getResource(), "LUA_DEFAULT_LOCK_", DEFAULT_LOCK_MAX_EXIST_TIME);
     }
 
 

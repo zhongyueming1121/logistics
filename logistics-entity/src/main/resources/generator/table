@@ -1,0 +1,66 @@
+<table tableName="ch_interface" domainObjectName="ChInterfaceEntity" mapperName="ChInterfaceMapper">
+    <!--如果需要生成 vo 则定义此属性-->
+    <property name="voObjectName" value="ChInterfaceVo"/>
+    <!--如果要生成缓存，则定义此属性-->
+    <!--<property name="ZxInterfaceCache" value="true"/>-->
+</table>
+<table tableName="ch_channel" domainObjectName="ChChannelEntity" mapperName="ChChannelMapper">
+    <!--如果需要生成 vo 则定义此属性-->
+    <property name="voObjectName" value="ChChannelVo"/>
+    <!--如果要生成缓存，则定义此属性-->
+    <!--<property name="ZxInterfaceCache" value="true"/>-->
+</table>
+<table tableName="ch_product" domainObjectName="ChProductEntity" mapperName="ChProductMapper">
+    <!--如果需要生成 vo 则定义此属性-->
+    <property name="voObjectName" value="ChProductVo"/>
+    <!--如果要生成缓存，则定义此属性-->
+    <!--<property name="ZxInterfaceCache" value="true"/>-->
+</table>
+<table tableName="ch_transaction" domainObjectName="ChTransactionEntity" mapperName="ChTransactionMapper">
+    <!--如果需要生成 vo 则定义此属性-->
+    <property name="voObjectName" value="ChTransactionVo"/>
+    <!--如果要生成缓存，则定义此属性-->
+    <!--<property name="ZxInterfaceCache" value="true"/>-->
+</table>
+<table tableName="mb_finance" domainObjectName="MbFinanceEntity" mapperName="MbFinanceMapper">
+    <!--如果需要生成 vo 则定义此属性-->
+    <property name="voObjectName" value="MbFinanceVo"/>
+    <!--如果要生成缓存，则定义此属性-->
+    <!--<property name="ZxInterfaceCache" value="true"/>-->
+</table>
+<table tableName="mb_interface" domainObjectName="MbInterfaceEntity" mapperName="MbInterfaceMapper">
+    <!--如果需要生成 vo 则定义此属性-->
+    <property name="voObjectName" value="MbInterfaceVo"/>
+    <!--如果要生成缓存，则定义此属性-->
+    <!--<property name="ZxInterfaceCache" value="true"/>-->
+</table>
+<table tableName="mb_interface" domainObjectName="MbInterfaceEntity" mapperName="MbInterfaceMapper">
+    <!--如果需要生成 vo 则定义此属性-->
+    <property name="voObjectName" value="MbInterfaceVo"/>
+    <!--如果要生成缓存，则定义此属性-->
+    <!--<property name="ZxInterfaceCache" value="true"/>-->
+</table>
+<table tableName="api_access_index" domainObjectName="ApiAccessIndexEntity" mapperName="ApiAccessIndexMapper">
+    <!--如果需要生成 vo 则定义此属性-->
+    <property name="voObjectName" value="ApiAccessIndexVo"/>
+    <!--如果要生成缓存，则定义此属性-->
+    <!--<property name="ZxInterfaceCache" value="true"/>-->
+</table>
+<table tableName="api_access_log" domainObjectName="ApiAccessLogEntity" mapperName="ApiAccessLogMapper">
+    <!--如果需要生成 vo 则定义此属性-->
+    <property name="voObjectName" value="ApiAccessLogVo"/>
+    <!--如果要生成缓存，则定义此属性-->
+    <!--<property name="ZxInterfaceCache" value="true"/>-->
+</table>
+<table tableName="api_request_log" domainObjectName="ApiRequestLogEntity" mapperName="ApiRequestLogMapper">
+    <!--如果需要生成 vo 则定义此属性-->
+    <property name="voObjectName" value="ApiRequestLogVo"/>
+    <!--如果要生成缓存，则定义此属性-->
+    <!--<property name="ZxInterfaceCache" value="true"/>-->
+</table>
+<table tableName="ch_transaction" domainObjectName="ChTransactionEntity" mapperName="ChTransactionMapper">
+    <!--如果需要生成 vo 则定义此属性-->
+    <property name="voObjectName" value="ChTransactionVo"/>
+    <!--如果要生成缓存，则定义此属性-->
+    <!--<property name="ZxInterfaceCache" value="true"/>-->
+</table>

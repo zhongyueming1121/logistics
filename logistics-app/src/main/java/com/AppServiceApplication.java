@@ -1,12 +1,11 @@
 package com;
 
+import com.lgts.framework.jedis.EnableYmRedis;
 import org.mybatis.spring.annotation.MapperScan;
-import org.mybatis.spring.mapper.MapperScannerConfigurer;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.context.annotation.Bean;
 
 /**
  * 配置中心启动类
@@ -15,7 +14,8 @@ import org.springframework.context.annotation.Bean;
  */
 @EnableDiscoveryClient
 @SpringBootApplication
-@MapperScan("com.light.lgts.dao")
+@EnableYmRedis
+@MapperScan("com.diyou.entity.mapper")
 public class AppServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(AppServiceApplication.class,args);
